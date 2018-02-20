@@ -40,22 +40,69 @@
 <!-- en div tag som kapsler inn boksen som kun er relevant om  ja krysses av, vises ved js funksjon showHide-->
     <div id="campus" style="display:none">
       Ønsker dere hjelp fra Teknisk Gruppe (TG) i forbindelse med lyd og lys til Show?<br>
-      <input type="radio" name="TG" value="ja" onclick="showHideCampusTG()">ja<br>
+      <input type="radio" name="TGCampus" value="ja" onclick="showHideCampusTG()">ja<br>
 <!-- en div tag som kapsler inn boksen som kun er relevant om  ja krysses av, vises ved js funksjon showHide-->
-        <div id="jaTG" style="display:none">
+        <div id="jaTGCampus" style="display:none">
         Beskrivelse av lyd og lysbehov<br>
           <textarea name="textarea" style="width:250px;height:150px;"></textarea><br>
         </div>
-      <input type="radio" name="TG" value="nei">nei<br>
+      <input type="radio" name="TGCampus" value="nei">nei<br>
       Ønsker dere KKU?<br>
-      <input
+      <input type="radio" name="KKUCampus1" value="ja" onclick="showHideCampusKKU()">ja<br>
+        <div id="jaKKUCampus" style="display:none">
+          Ønsker dere at alkoholklasse 3 serveres i baren?<br>
+          <input type="radio" name="KKUCampus" value="ja">ja<br>
+          <input type="radio" name="KKUCampus" value="nei">nei<br>
+        </div>
+      Hvor mange bord trenger dere?
+      <input type="text" name="bord"><br>
+      Hvor mange stoler trenger dere?
+      <input type="text" name="stoler"><br>
     </div>
-    <input type="checkbox" name="rom" value="aulaen">Aulaen<br>
-    <input type="checkbox" name="rom" value="fuken">Fuken<br>
-    <input type="checkbox" name="rom" value="klubben">Klubben<br>
+    <input type="checkbox" name="rom" value="aulaen" onclick="showHideAula()">Aulaen<br>
+    <div id="jaAula" style="display:none">
+      Ønsker dere hjelp fra Teknisk Gruppe (TG) i forbindelse med lyd og lys til Show?<br>
+      <input type="radio" name="TGAula" value="ja" onclick="showHideAulaTG()">ja<br>
+<!-- en div tag som kapsler inn boksen som kun er relevant om  ja krysses av, vises ved js funksjon showHide-->
+        <div id="jaTGAula" style="display:none">
+        Beskrivelse av lyd og lysbehov<br>
+          <textarea name="textarea" style="width:250px;height:150px;"></textarea><br>
+        </div>
+      <input type="radio" name="TGAula" value="nei">nei<br>
+    Ønsker dere hjelp fra K7?<br>
+    <input type="radio" name="K7Aula" value="ja" onclick="showHideAulaK7()">ja<br>
+<!-- en div tag som kapsler inn boksen som kun er relevant om  ja krysses av, vises ved js funksjon showHide-->
+      <div id="jaK7Aula" style="display:none">
+      Beskrivelse av video og AV behov<br>
+        <textarea name="textarea" style="width:250px;height:150px;"></textarea><br>
+      </div>
+    <input type="radio" name="K7Aula" value="nei">nei<br>
+    Trenger dere KKU?<br>
+    <input type="radio" name="KKUAula" value="ja">ja<br>
+    <input type="radio" name="KKUAula" value="ja">ja<br>
+    Hvor mange bord trenger dere?<br>
+    <input type="text" name="bord"><br>
+    Hvor mange stoler trenger dere?
+    <input type="text" name="stoler"><br>
+    </div>
+    <input type="checkbox" name="rom" value="fuken" onclick="showHideFuken()">Fuken<br>
+    <div id="jaFuken" style="display:none">
+          <!--sett inn link til reglement og gjør så man må åpne for å trykke ja om mulig-->
+         Jeg har satt meg inn i reglementet rundt et sluttet selskap?
+         <input type="radio" name="reglement" value="ja">ja<br>
+         <input type="radio" name="reglement" value="nei">nei<br>
+         Hvor mange bord trenger dere?
+         <input type="text" name="bord"><br>
+         Hvor mange stoler trenger dere?
+         <input type="text" name="stoler"><br>
+    </div>
+    <input type="checkbox" name="rom" value="klubben" onclick="showHideKlubben">Klubben<br>
+    <div id="jaKlubben" style="display:none">
+
+    </div>
     <input type="checkbox" name="rom" value="studentkantinen">Studentkantinen<br>
     <input type="checkbox" name="rom" value="personalkantinen">Personalkantinen<br>
-    Andre ressurser:
+    Andre ressurser:<br>
     <input type="radio" name="ressurser" value="foto">Ønsker dere at Foto NHHS stiller på arrangementet<br>
     <input type="radio" name="ressurser" value="lerret">Leie lerret<br>
     <input type="radio" name="ressurser" value="prosjektor">Leie prosjektor<br>
