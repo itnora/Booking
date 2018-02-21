@@ -1,12 +1,14 @@
 /*kode som viser dialogbokser som kun er relevant
 om du krysser av for et spesielt alternativ,
 eller fjerner den om det er trykket feil*/
+// denne funksjonen funker på checkboox
 function showHideCampus(){
   var x =document.getElementById("C").checked;
   if(x==true){
     document.getElementById("campus").style.display="inline";
   } else {document.getElementById("campus").style.display="none";}
 }
+// denne og neste funksjon funker på radio button, må ha en funksjon pr button
 function showCampusTG(){
     document.getElementById("jaTGCampus").style.display="inline";
   }
